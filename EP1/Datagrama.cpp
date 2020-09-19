@@ -1,7 +1,7 @@
 #include "Datagrama.h"
 #include <iostream>
 
-int Datagrama::getOrigem(){ // Retorna o valor do endereço de origem
+int Datagrama::getOrigem(){ // Retorna o valor do endereÃ§o de origem
 
     return origem;
 
@@ -26,7 +26,7 @@ void Datagrama::processar(){ // Decrementa o valor do TTL em uma unidade
 
 }
 
-bool Datagrama::ativo(){ // Enquanto o TTL for maior que zero, o método ativo deve retornar true.
+bool Datagrama::ativo(){ // Enquanto o TTL for maior que zero, o mÃ©todo ativo deve retornar true.
     if(ttl =< 0){
         return false;
     }
@@ -36,7 +36,7 @@ bool Datagrama::ativo(){ // Enquanto o TTL for maior que zero, o método ativo de
     }
 }
 
-void Datagrama::imprimir(){ // Implementação livre (não há regras no enunciado)
+void Datagrama::imprimir(){ // ImplementaÃ§Ã£o livre (nÃ£o hÃ¡ regras no enunciado)
 
 
 }
