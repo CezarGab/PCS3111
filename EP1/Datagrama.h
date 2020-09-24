@@ -1,3 +1,4 @@
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -10,7 +11,8 @@ class Datagrama
     private:
         int origem;
         int destino;
-        int ttl = 0;
+        int ttl;
+        string dado;
 
     public:
         Datagrama(int origem, int destino, int ttl, string dado);

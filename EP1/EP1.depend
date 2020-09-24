@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1600913283 source:/home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Datagrama.cpp
+	"Datagrama.h"
+	<iostream>
+
+1600910691 /home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Datagrama.h
+	<iostream>
+	<string>
+
+1600913238 source:/home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Fila.cpp
+	"Fila.h"
+
+1600913372 /home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Fila.h
+	"Datagrama.h"
+
+1600913203 source:/home/gabriel/Documentos/GitHub/PCS3111-master/EP1/main.cpp
+	<iostream>
+	<string>
+	"Datagrama.h"
+	"Fila.h"
+
