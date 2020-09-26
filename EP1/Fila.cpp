@@ -1,3 +1,5 @@
+#include <iostream>
+#include <string>
 #include "Fila.h"
 #define DELETED
 
@@ -37,12 +39,12 @@ void Fila::setFim(int posicao) { // Altera o atributo fim da fila
 // Enqueue - adiciona um datagrama no fim da lista
 bool Fila::enqueue(Datagrama* d) {
     if (this->getInicio() == this->getFim()) { // Checando se o fim é igual ao começo
-        if (this->isEmpty() == true) {  // Checa se a lista está vazia ou cheia
+        if (this->isEmpty() == true) {  // Checa se a lista está vazia
             this->fila[this->getFim()] = d;
             if (this->getFim() == this->getTamanho()) {
                 this->setFim(0);
             }
-            else {
+            else { // Lista cheia
                 this->setFim(this->getFim() + 1);
                 return true;
             }
@@ -84,5 +86,6 @@ bool Fila::isEmpty() {
     }
 
 }
+
 
 

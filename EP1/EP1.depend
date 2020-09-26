@@ -1,21 +1,31 @@
 # depslib dependency file v1.0
-1600913283 source:/home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Datagrama.cpp
-	"Datagrama.h"
-	<iostream>
-
-1600910691 /home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Datagrama.h
-	<iostream>
-	<string>
-
-1600913238 source:/home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Fila.cpp
-	"Fila.h"
-
-1600913372 /home/gabriel/Documentos/GitHub/PCS3111-master/EP1/Fila.h
-	"Datagrama.h"
-
-1600913203 source:/home/gabriel/Documentos/GitHub/PCS3111-master/EP1/main.cpp
+1601074688 source:c:\users\cezar\documents\usp\laboo\ep1\ep1\main.cpp
 	<iostream>
 	<string>
 	"Datagrama.h"
 	"Fila.h"
+	"TabelaDeRepasse.h"
+
+1601074688 c:\users\cezar\documents\usp\laboo\ep1\ep1\datagrama.h
+	<string>
+
+1601062209 c:\users\cezar\documents\usp\laboo\ep1\ep1\fila.h
+	"Datagrama.h"
+
+1601065620 source:c:\users\cezar\documents\usp\laboo\ep1\ep1\fila.cpp
+	<iostream>
+	<string>
+	"Fila.h"
+
+1601063119 source:c:\users\cezar\documents\usp\laboo\ep1\ep1\datagrama.cpp
+	"Datagrama.h"
+	<iostream>
+
+1601074688 c:\users\cezar\documents\usp\laboo\ep1\ep1\tabeladerepasse.h
+	"Roteador.h"
+
+1601074715 c:\users\cezar\documents\usp\laboo\ep1\ep1\roteador.h
+
+1601074715 source:c:\users\cezar\documents\usp\laboo\ep1\ep1\roteador.cpp
+	"Roteador.h"
 
