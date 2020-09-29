@@ -36,6 +36,10 @@ void Fila::setFim(int posicao) { // Altera o atributo fim da fila
     this->fim = posicao;
 }
 
+void Fila::setInicio(int posicao) {
+    this->inicio = posicao;
+}
+
 // Enqueue - adiciona um datagrama no fim da lista
 bool Fila::enqueue(Datagrama* d) {
     if (this->getInicio() == this->getFim()) { // Checando se o fim é igual ao começo
@@ -84,6 +88,22 @@ bool Fila::isEmpty() {
         // Fila contém algo
         return false;
     }
+
+}
+
+Datagrama* Fila::dequeue() {
+    if (this->isEmpty() == true) { // Checa se a fila está vazia (underflow), retorna NULL se estiver
+        return NULL;
+    }
+    Datagrama* retirado = this->fila[this->getInicio()]; // Armazena o datagrama em uma variável
+    this->fila[this->getInicio()] = NULL;
+    if (this->getInicio() == this->getTamanho()) { //   Checa se o início está na última posição da lista,
+        this->setInicio(0);                        // se estiver ele coloca o início na posição 0 [fila circular]
+    }
+    else {
+        this->setInicio(this->getInicio() + 1); // Se não coloca na próxima posição
+    }
+    return retirado;
 
 }
 

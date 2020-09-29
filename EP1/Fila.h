@@ -26,6 +26,7 @@ class Fila
 
         // Sets
         void setFim(int posicao);
+        void setInicio(int posicao);
 
         void imprimir();
 

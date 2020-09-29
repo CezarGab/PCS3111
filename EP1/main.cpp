@@ -12,7 +12,8 @@ using namespace std;
 int main()
 {
 	// Bateria de testes - Classe Fila
-    /*cout << "Teste - Fila" << endl;
+    /*
+    cout << "Teste - Fila" << endl;
     Fila* fila1 = new Fila(3);
     cout << "Tamanho da fila 1: " << fila1->getTamanho() << endl;
     Datagrama* teste1 = new Datagrama(1, 3, 4, "mensagem pip popa");
@@ -31,7 +32,13 @@ int main()
     cout << "Datagrama 3 inserido na fila. " << fila1->enqueue(teste3) << endl;
     cout << "Datagrama 4 inserido na fila. " << fila1->enqueue(teste4) << " espera se 0" << endl;
     cout << "Datagrama 5 inserido na fila. " << fila1->enqueue(teste5) << " espera se 0" << endl;
-    cout << "Fila 1 esta vazia? " << fila1->isEmpty() << endl; */
+    cout << "Dequeue " << fila1->dequeue() << endl;
+    cout << "Dequeue " << fila1->dequeue() << endl;
+    cout << "Dequeue " << fila1->dequeue() << endl;
+    cout << "Dequeue " << fila1->dequeue() << endl;
+    cout << "Dequeue " << fila1->dequeue() << endl;
+    cout << "Fila 1 esta vazia? " << fila1->isEmpty() << endl;
+    */
 
     return 0;
 }
