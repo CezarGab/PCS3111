@@ -47,6 +47,7 @@ bool Fila::enqueue(Datagrama* d) {
             this->fila[this->getFim()] = d;
             if (this->getFim() == this->getTamanho()) {
                 this->setFim(0);
+                return true; // Cezar: Não tenho certeza se deve retornar TRUE, mas se não retornar nada da erro de compilação
             }
             else { // Lista cheia
                 this->setFim(this->getFim() + 1);

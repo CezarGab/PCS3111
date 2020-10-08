@@ -21,7 +21,7 @@ TabelaDeRepasse::~TabelaDeRepasse(){
     delete this->roteadores;
     delete this->endereco; // DÚVIDA: devo destruir as outras variáveis também?
 
-    cout << "Tabela de Repasse destruída" << endl;
+    cout << "Tabela de Repasse destruida" << endl;
 }
 
 bool TabelaDeRepasse::mapear(int endereco, Roteador* adjacente){
@@ -29,6 +29,8 @@ bool TabelaDeRepasse::mapear(int endereco, Roteador* adjacente){
             for(int i = 0; i < tamanhoTabela; i++){ // Este FOR verifica se o endereco já está na tabela
                 if(this->endereco[i] == endereco){
                     roteadores[i] = adjacente; // Se estiver, ele associa o roteador ao endereco
+
+                    tamanhoTabela++;
                     return true;
                 }
             }
@@ -36,11 +38,12 @@ bool TabelaDeRepasse::mapear(int endereco, Roteador* adjacente){
             tamanhoTabela = tamanhoTabela + 1; // Aumenta-se o tamanho da tabela
             this->endereco[tamanhoTabela] = endereco; // Associa o endereco
             roteadores[tamanhoTabela] = adjacente; // Associa o roteador ao endereco
+
             return true;
         }
 
         else{
-            return false; // A tabela já está cheia
+            return false; // A tabela já está cheia - OVERFLOW
         }
 
 }

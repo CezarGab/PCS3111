@@ -29,3 +29,43 @@
 1601074715 source:c:\users\cezar\documents\usp\laboo\ep1\ep1\roteador.cpp
 	"Roteador.h"
 
+1601062209 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\datagrama.cpp
+	"Datagrama.h"
+	<iostream>
+
+1601062209 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\datagrama.h
+	<iostream>
+	<string>
+
+1602004010 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\main.cpp
+	<iostream>
+	<string>
+	"Datagrama.h"
+	"Fila.h"
+	"TabelaDeRepasse.h"
+
+1602004010 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\fila.h
+	"Datagrama.h"
+
+1601077944 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\tabeladerepasse.h
+	"Roteador.h"
+
+1602007586 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\roteador.h
+	"TabelaDeRepasse.h"
+	"Fila.h"
+
+1602007693 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\roteador.cpp
+	"Roteador.h"
+	<iostream>
+	<string>
+
+1601077703 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\tabeladerepasse.cpp
+	"TabelaDeRepasse.h"
+	<iostream>
+	<string>
+
+1602008092 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep1\fila.cpp
+	<iostream>
+	<string>
+	"Fila.h"
+

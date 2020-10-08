@@ -1,11 +1,88 @@
 #include "Roteador.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
-Roteador::Roteador()
+Roteador::Roteador(int endereco)
 {
-    //ctor
+    this->endereco=endereco;
+
+    tabela = new TabelaDeRepasse();
+    fila = new Fila(TAMANHO_FILA);
+
+    ultimoDadoRecebido = ""; // Como o roteador está sendo construido agora, não há ultimo dado recebido.
 }
 
 Roteador::~Roteador()
 {
-    //dtor
+    delete fila;
+    delete tabela;
+}
+
+TabelaDeRepasse* Roteador::getTabela()
+{
+    return tabela; // retorna a TabelaDeRepasse do roteador.
+}
+
+Fila* Roteador::getFila()
+{
+    return fila; // retorna a Fila do roteador.
+}
+
+int Roteador::getEndereco()
+{
+    return endereco; // retorna o endereco do roteador.
+}
+
+void Roteador::receber(Datagrama* d)
+{
+    if(fila->enqueue(d) == false){ // se der true, o enqueue funcionou
+        cout << "\tFila em " << endereco << "estourou." << endl; // overflow na fila do roteador
+    }
+}
+
+void Roteador::processar()
+{
+//    cout << "\tIniciando o processamento" << endl;
+
+    Datagrama* dtgParaProcessar; // Datagrama que será processado.
+
+    dtgParaProcessar = fila->dequeue(); // Obtem este datagrama dando o dequeue na fila do roteador.
+
+//    cout << "\tDatagrama em processamento: " << dtgParaProcessar->getDado() << endl;
+
+    if(dtgParaProcessar != NULL){ // Se não ha datagrama para ser processado, o roteador nao faz nada
+
+        dtgParaProcessar->processar(); // processa o datagrama
+
+        if(dtgParaProcessar->ativo() == false){ // Se ele estiver desativado, deve ser deletado
+            delete dtgParaProcessar;
+        }
+
+        if(dtgParaProcessar->getDestino() == endereco){ // Se o destino do datagrama for este roteador...
+            ultimoDadoRecebido = dtgParaProcessar->getDado(); // Ele guarda o dado.
+        }
+
+        else{ // Entao o destino do datagrama eh outro roteador
+            Roteador* roteadorParaRepassar = tabela->getDestino(endereco); // Descobre qual deve ser o roteador para repassar atraves da tabela
+
+            if(roteadorParaRepassar == NULL){ // Se a tabela nao sabe...
+                delete dtgParaProcessar; // exclui o datagrama
+            }
+
+            else{
+            roteadorParaRepassar->receber(dtgParaProcessar); // O roteador de repasse recebe o datagrama em questao
+            }
+        }
+    }
+}
+
+string Roteador::getUltimoDadoRecebido()
+{
+    return ultimoDadoRecebido;
+}
+
+void Roteador::imprimir()
+{
+
 }
