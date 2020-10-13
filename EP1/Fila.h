@@ -19,15 +19,6 @@ class Fila
         Datagrama* dequeue();
         bool isEmpty();
 
-        // Gets
-        int getTamanho();
-        int getInicio();
-        int getFim();
-
-        // Sets
-        void setFim(int posicao);
-        void setInicio(int posicao);
-
         void imprimir();
 
 
