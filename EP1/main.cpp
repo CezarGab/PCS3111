@@ -8,6 +8,9 @@ using namespace std;
 //#include "Rede.h"
 #include "Roteador.h"
 
+void menuPrincipal();
+void enviarDatagrama();
+void passarTempo();
 
 int main()
 {
@@ -71,5 +74,78 @@ int main()
 //    rot1->processar();
 //    cout << "Deve retornar a mensagem do data 2: " << rot1->getUltimoDadoRecebido() << endl;
 
+
+    // Main.cpp
+    menuPrincipal();
+
     return 0;
+}
+
+void menuPrincipal()
+{
+    int opcao;
+    cout << "Simulador de Rede" << endl;
+    cout << "---" << endl;
+    cout << "1) Enviar um datagrama" << endl;
+    cout << "2) Passar tempo" << endl;
+    cout << "3) Sair" << endl;
+    cout << "Escolha uma opcao: ";
+
+    cin >> opcao;
+
+    switch ( opcao )
+    {
+        case 1 : // Enviar um datagrama
+            enviarDatagrama();
+
+        case 2 : // Passar tempo
+            passarTempo();
+
+        case 3: // Sair
+            break;
+
+        default :
+        printf (" ERRO: Opcao invalida.");
+        break;
+    }
+}
+
+void enviarDatagrama()
+{
+    int origem, destino, ttl;
+    string mensagem;
+
+    cout << "Endereco do roteador de origem: ";
+    cin >> origem;
+    cout << "Endereco de destino: ";
+    cin >> destino;
+    cout << "TTL: ";
+    cin >> ttl;
+    cout << "Mensagem: ";
+    cin >> mensagem;
+
+//    rede->enviar(mensagem, origem, destino, ttl); // Inserir tambem as consequencias/erros
+
+
+    menuPrincipal(); // Retornando ao menu.
+}
+
+void passarTempo()
+{
+    int tempo;
+    int n;
+    cout << "Quantidade de tempo: ";
+    cin >> n;
+
+    cout << "Intante " << n << endl;
+    cout << "---" << endl;
+
+    for(tempo = 1; tempo <= n; tempo++){
+//        rede->passarTempo;
+//        "Processamento do roteador X"
+
+    }
+
+    menuPrincipal();
+
 }
