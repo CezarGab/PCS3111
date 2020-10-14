@@ -49,41 +49,46 @@ void Roteador::processar()
 
     dtgParaProcessar = fila->dequeue(); // Obtem este datagrama dando o dequeue na fila do roteador.
 
-//    cout << "\tDatagrama em processamento: " << dtgParaProcessar->getDado() << endl;
 
-    if(dtgParaProcessar != NULL){ // Se não ha datagrama para ser processado, o roteador nao faz nada
 
+    if((!fila->isEmpty()) || dtgParaProcessar != NULL){ // Se não ha datagrama para ser processado, o roteador nao faz nada
+
+//        cout << "\t\t\tDatagrama em processamento: " << dtgParaProcessar->getDado() << endl; // Apagar depois
         cout << "Roteador " << endereco << endl;
         dtgParaProcessar->processar(); // processa o datagrama
 
         if(dtgParaProcessar->ativo() == false){ // Se ele estiver desativado, deve ser deletado
-            delete dtgParaProcessar;
             cout << "\tDestruido por TTL: ";
             cout << "Origem: " << dtgParaProcessar->getOrigem();
             cout << ", Destino: " << dtgParaProcessar->getDestino();
             cout << ", TTL: " << dtgParaProcessar->getTtl();
             cout << ", " << dtgParaProcessar->getDado() << endl;
+
+            delete dtgParaProcessar;
         }
 
-        if(dtgParaProcessar->getDestino() == endereco){ // Se o destino do datagrama for este roteador...
-            ultimoDadoRecebido = dtgParaProcessar->getDado(); // Ele guarda o dado.
-            cout << "\tRecebido: " << dtgParaProcessar->getDado() << endl;
-        }
-
-        else{ // Entao o destino do datagrama eh outro roteador
-            Roteador* roteadorParaRepassar = tabela->getDestino(endereco); // Descobre qual deve ser o roteador para repassar atraves da tabela
-
-            if(roteadorParaRepassar == NULL){ // Se a tabela nao sabe...
-                delete dtgParaProcessar; // exclui o datagrama
+        else{ // Entao o datagrama esta ativo ainda
+            if(dtgParaProcessar->getDestino() == endereco){ // Se o destino do datagrama for este roteador...
+                ultimoDadoRecebido = dtgParaProcessar->getDado(); // Ele guarda o dado.
+                cout << "\tRecebido: " << ultimoDadoRecebido << endl;
             }
 
-            else{
-            roteadorParaRepassar->receber(dtgParaProcessar); // O roteador de repasse recebe o datagrama em questao
-            cout << "\tEnviado para " << endereco << ": ";
-            cout << "Origem: " << dtgParaProcessar->getOrigem();
-            cout << ", Destino: " << dtgParaProcessar->getDestino();
-            cout << ", TTL: " << dtgParaProcessar->getTtl();
-            cout << ", " << dtgParaProcessar->getDado() << endl;
+            else{ // Entao o destino do datagrama eh outro roteador
+                Roteador* roteadorParaRepassar = tabela->getDestino(dtgParaProcessar->getDestino()); // Descobre qual deve ser o roteador para repassar atraves da tabela
+
+                if(roteadorParaRepassar == NULL){ // Se a tabela nao sabe...
+                    delete dtgParaProcessar; // exclui o datagrama
+                    cout << "\tNao ha pra quem repassar." << endl; // APAGAR ESSA LINHA DEPOIS (acho que nao precisa)
+                }
+
+                else{
+                roteadorParaRepassar->receber(dtgParaProcessar); // O roteador de repasse recebe o datagrama em questao
+                cout << "\tEnviado para " << roteadorParaRepassar->getEndereco() << ": ";
+                cout << "Origem: " << dtgParaProcessar->getOrigem();
+                cout << ", Destino: " << dtgParaProcessar->getDestino();
+                cout << ", TTL: " << dtgParaProcessar->getTtl();
+                cout << ", " << dtgParaProcessar->getDado() << endl;
+                }
             }
         }
     }

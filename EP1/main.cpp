@@ -99,8 +99,10 @@ int main()
     r2->getTabela()->mapear(1, r1);
     r2->getTabela()->mapear(3, r3);
     r3->getTabela()->mapear(6, r6);
-    r4->getTabela()->mapear(4, r4);
+    r4->getTabela()->mapear(1, r1);
     r5->getTabela()->mapear(6, r6);
+    r5->getTabela()->mapear(4, r4);
+//    r5->getTabela()->imprimir();
     r6->getTabela()->mapear(3, r3);
 
 
@@ -144,7 +146,7 @@ void menuPrincipal(Rede* rede)
             break;
 
         default :
-            printf (" ERRO: Opcao invalida.");
+            cout << " ERRO: Opcao invalida." << endl;
             break;
     }
 }
@@ -178,7 +180,7 @@ void enviarDatagrama(Rede* rede)
 void passarTempo(Rede* rede)
 {
     int tempo;
-    int n, i;
+    int n;
     cout << "Quantidade de tempo: ";
     cin >> n;
     cout << endl;
