@@ -53,14 +53,21 @@ void Roteador::processar()
 
     if(dtgParaProcessar != NULL){ // Se não ha datagrama para ser processado, o roteador nao faz nada
 
+        cout << "Roteador " << endereco << endl;
         dtgParaProcessar->processar(); // processa o datagrama
 
         if(dtgParaProcessar->ativo() == false){ // Se ele estiver desativado, deve ser deletado
             delete dtgParaProcessar;
+            cout << "\tDestruido por TTL: ";
+            cout << "Origem: " << dtgParaProcessar->getOrigem();
+            cout << ", Destino: " << dtgParaProcessar->getDestino();
+            cout << ", TTL: " << dtgParaProcessar->getTtl();
+            cout << ", " << dtgParaProcessar->getDado() << endl;
         }
 
         if(dtgParaProcessar->getDestino() == endereco){ // Se o destino do datagrama for este roteador...
             ultimoDadoRecebido = dtgParaProcessar->getDado(); // Ele guarda o dado.
+            cout << "\tRecebido: " << dtgParaProcessar->getDado() << endl;
         }
 
         else{ // Entao o destino do datagrama eh outro roteador
@@ -72,6 +79,11 @@ void Roteador::processar()
 
             else{
             roteadorParaRepassar->receber(dtgParaProcessar); // O roteador de repasse recebe o datagrama em questao
+            cout << "\tEnviado para " << endereco << ": ";
+            cout << "Origem: " << dtgParaProcessar->getOrigem();
+            cout << ", Destino: " << dtgParaProcessar->getDestino();
+            cout << ", TTL: " << dtgParaProcessar->getTtl();
+            cout << ", " << dtgParaProcessar->getDado() << endl;
             }
         }
     }

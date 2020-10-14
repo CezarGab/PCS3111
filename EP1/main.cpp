@@ -9,8 +9,8 @@ using namespace std;
 #include "Roteador.h"
 
 void menuPrincipal(Rede* rede);
-void enviarDatagrama();
-void passarTempo();
+void enviarDatagrama(Rede* rede);
+void passarTempo(Rede* rede);
 
 int main()
 {
@@ -112,10 +112,14 @@ int main()
 
     menuPrincipal(rede);
 
+    // menuPrincipal:
+
+
+
     return 0;
 }
 
-void menuPrincipal(rede)
+void menuPrincipal(Rede* rede)
 {
     int opcao;
     cout << "Simulador de Rede" << endl;
@@ -126,25 +130,26 @@ void menuPrincipal(rede)
     cout << "Escolha uma opcao: ";
 
     cin >> opcao;
+    cout << endl;
 
     switch ( opcao )
     {
         case 1 : // Enviar um datagrama
-            enviarDatagrama();
+            enviarDatagrama(rede);
 
         case 2 : // Passar tempo
-            passarTempo();
+            passarTempo(rede);
 
         case 3: // Sair
             break;
 
         default :
-        printf (" ERRO: Opcao invalida.");
-        break;
+            printf (" ERRO: Opcao invalida.");
+            break;
     }
 }
 
-void enviarDatagrama()
+void enviarDatagrama(Rede* rede)
 {
     int origem, destino, ttl;
     string mensagem;
@@ -157,29 +162,34 @@ void enviarDatagrama()
     cin >> ttl;
     cout << "Mensagem: ";
     cin >> mensagem;
+    cout << endl;
 
-//    rede->enviar(mensagem, origem, destino, ttl); // Inserir tambem as consequencias/erros
+    Roteador* rotOrigem = rede->getRoteador(origem);
 
-
-    menuPrincipal(); // Retornando ao menu.
-}
-
-void passarTempo()
-{
-    int tempo;
-    int n;
-    cout << "Quantidade de tempo: ";
-    cin >> n;
-
-    cout << "Intante " << n << endl;
-    cout << "---" << endl;
-
-    for(tempo = 1; tempo <= n; tempo++){
-//        rede->passarTempo;
-//        "Processamento do roteador X"
-
+    if (rotOrigem == NULL){
+        cout << "Erro: origem desconhecida" << endl;
     }
 
-    menuPrincipal();
+    rede->enviar(mensagem, rotOrigem, destino, ttl); // Inserir tambem as consequencias/erros
+
+    menuPrincipal(rede);
+}
+
+void passarTempo(Rede* rede)
+{
+    int tempo;
+    int n, i;
+    cout << "Quantidade de tempo: ";
+    cin >> n;
+    cout << endl;
+
+    for(tempo = 1; tempo <= n; tempo++){
+        cout << "Intante " << tempo << endl;
+        cout << "---" << endl;
+        rede->passarTempo();
+        cout << endl;
+    }
+
+    menuPrincipal(rede);
 
 }

@@ -8,7 +8,7 @@ Rede::Rede(Roteador** roteadores, int quantidadeDeRoteadores) : roteadores(rotea
     //ctor                                                                                                      // Vetor começa na posição 0
 }
 
-Rede::~Rede() {
+Rede::~Rede() { // DUVIDA: sera que nao tem que fazer nada aqui?
     //dtor
 }
 
