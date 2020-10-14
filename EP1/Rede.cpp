@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Rede::Rede(Roteador** roteadores, int quantidadeDeRoteadores) : roteadores(roteadores), quantidadeDeRoteadores(quantidadeDeRoteadores - 1) {
+Rede::Rede(Roteador** roteadores, int quantidadeDeRoteadores) : roteadores(roteadores), quantidadeDeRoteadores(quantidadeDeRoteadores) {
     //ctor                                                                                                      // Vetor começa na posição 0
 }
 
@@ -27,13 +27,13 @@ void Rede::enviar(string texto, Roteador* origem, int destino, int ttl) {
 }
 
 void Rede::passarTempo() {
-    for(int i = 0; i < quantidadeDeRoteadores + 1; i++) {
+    for(int i = 0; i < quantidadeDeRoteadores; i++) {
 //        cout << "Processando o roteador " << i+1 << endl; // Apagar depois
-
+        /*
         if(i==4){   // Apagar depois
             cout << "A fila do roteador 5 esta vazia? " << roteadores[i]->getFila()->isEmpty() << endl;
         }
-
+        */
         roteadores[i]->processar();
     }
 }

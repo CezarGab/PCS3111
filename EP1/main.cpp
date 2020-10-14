@@ -138,9 +138,11 @@ void menuPrincipal(Rede* rede)
     {
         case 1 : // Enviar um datagrama
             enviarDatagrama(rede);
+            break;
 
         case 2 : // Passar tempo
             passarTempo(rede);
+            break;
 
         case 3: // Sair
             break;
@@ -186,7 +188,7 @@ void passarTempo(Rede* rede)
     cout << endl;
 
     for(tempo = 1; tempo <= n; tempo++){
-        cout << "Intante " << tempo << endl;
+        cout << "Instante " << tempo << endl;
         cout << "---" << endl;
         rede->passarTempo();
         cout << endl;

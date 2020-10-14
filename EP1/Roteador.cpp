@@ -71,6 +71,7 @@ void Roteador::processar()
             if(dtgParaProcessar->getDestino() == endereco){ // Se o destino do datagrama for este roteador...
                 ultimoDadoRecebido = dtgParaProcessar->getDado(); // Ele guarda o dado.
                 cout << "\tRecebido: " << ultimoDadoRecebido << endl;
+                delete dtgParaProcessar;
             }
 
             else{ // Entao o destino do datagrama eh outro roteador
