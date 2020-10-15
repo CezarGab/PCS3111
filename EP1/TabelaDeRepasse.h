@@ -8,8 +8,8 @@ class Roteador;
 class TabelaDeRepasse
 {
     private:
-        Roteador* roteadores[MAXIMO_TABELA];
-        int endereco[MAXIMO_TABELA];
+        Roteador** roteadores;
+        int *endereco;
         int tamanhoTabela;
         Roteador* roteadorPadrao;
 

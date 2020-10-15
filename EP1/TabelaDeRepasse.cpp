@@ -5,7 +5,8 @@ using namespace std;
 
 TabelaDeRepasse::TabelaDeRepasse(){
 //"criar uma tabela em que cabem no máximo MAXIMO_TABELA endereços de destinos e roteadores adjacentes. "
-
+    roteadores = new Roteador*[MAXIMO_TABELA];
+    endereco = new int[MAXIMO_TABELA];
     for(int i = 0; i < MAXIMO_TABELA; i++){
         roteadores[i] = NULL;
         endereco[i] = 0; // DÚVIDA: tentei colocar NULL também, mas aparentemente int não aceita
@@ -18,8 +19,8 @@ TabelaDeRepasse::TabelaDeRepasse(){
 
 TabelaDeRepasse::~TabelaDeRepasse(){
 //"O destrutor deve destruir os vetores alocados, mas não deve destruir os Roteadores adicionados ao vetor."
-    delete this->roteadores;
-    delete this->endereco; // DÚVIDA: devo destruir as outras variáveis também?
+    delete[] roteadores;
+    delete[] endereco; // DÚVIDA: devo destruir as outras variáveis também?
 
     cout << "Tabela de Repasse destruida" << endl;
 }
