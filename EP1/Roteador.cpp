@@ -37,8 +37,12 @@ int Roteador::getEndereco()
 void Roteador::receber(Datagrama* d)
 {
     if(fila->enqueue(d) == false){ // se der true, o enqueue funcionou
-        cout << "\tFila em " << endereco << "estourou." << endl; // overflow na fila do roteador
-    }
+        cout << "\tFila em " << endereco << " estourou." << endl; // overflow na fila do roteador
+    }/*
+    else {
+        cout << "Fila de " << endereco << endl;
+        fila->imprimir();
+    }*/
 }
 
 void Roteador::processar()
@@ -49,9 +53,9 @@ void Roteador::processar()
 
     dtgParaProcessar = fila->dequeue(); // Obtem este datagrama dando o dequeue na fila do roteador.
 
+    //(!fila->isEmpty()) ||
 
-
-    if((!fila->isEmpty()) || dtgParaProcessar != NULL){ // Se não ha datagrama para ser processado, o roteador nao faz nada
+    if(dtgParaProcessar != NULL){ // Se não ha datagrama para ser processado, o roteador nao faz nada
 
 //        cout << "\t\t\tDatagrama em processamento: " << dtgParaProcessar->getDado() << endl; // Apagar depois
         cout << "Roteador " << endereco << endl;
@@ -83,12 +87,16 @@ void Roteador::processar()
                 }
 
                 else{
-                roteadorParaRepassar->receber(dtgParaProcessar); // O roteador de repasse recebe o datagrama em questao
-                cout << "\tEnviado para " << roteadorParaRepassar->getEndereco() << ": ";
-                cout << "Origem: " << dtgParaProcessar->getOrigem();
-                cout << ", Destino: " << dtgParaProcessar->getDestino();
-                cout << ", TTL: " << dtgParaProcessar->getTtl();
-                cout << ", " << dtgParaProcessar->getDado() << endl;
+                    /*
+                    cout << "Estado inicial de " << roteadorParaRepassar->getEndereco() << endl;
+                    roteadorParaRepassar->getFila()->imprimir();
+                    */
+                    cout << "\tEnviado para " << roteadorParaRepassar->getEndereco() << ": ";
+                    cout << "Origem: " << dtgParaProcessar->getOrigem();
+                    cout << ", Destino: " << dtgParaProcessar->getDestino();
+                    cout << ", TTL: " << dtgParaProcessar->getTtl();
+                    cout << ", " << dtgParaProcessar->getDado() << endl;
+                    roteadorParaRepassar->receber(dtgParaProcessar); // O roteador de repasse recebe o datagrama em questao
                 }
             }
         }
@@ -104,3 +112,6 @@ void Roteador::imprimir()
 {
 
 }
+
+
+
