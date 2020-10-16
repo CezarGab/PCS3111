@@ -53,47 +53,6 @@ bool Fila::enqueue(Datagrama* d) {
         }
 
     }
-
-    /*
-    if(inicio == fim) {
-        // fila cheia
-        if(this->isEmpty() == true) {
-            fila[fim] = d;
-            fim = fim + 1;
-            return true;
-        }
-        else {
-            return false;
-        }
-        //return false;
-    }
-    else {
-        if(inicio != 0) {
-            if(fim + 1 == tamanho) {
-                fila[fim] = d;
-                fim = 0;
-                return true;
-            }
-            else {
-                fila[fim] = d;
-                fim = fim + 1;
-                return true;
-            }
-        }
-        else {
-            if(fim + 1 != tamanho) {
-                fila[fim] = d;
-                fim = fim + 1;
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-
-
-    }
-    */
 }
 
 // Checa se a lista está vazia
