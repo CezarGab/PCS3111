@@ -38,6 +38,8 @@
 		<Unit filename="Datagrama.h" />
 		<Unit filename="Fila.cpp" />
 		<Unit filename="Fila.h" />
+		<Unit filename="Rede.cpp" />
+		<Unit filename="Rede.h" />
 		<Unit filename="Roteador.cpp" />
 		<Unit filename="Roteador.h" />
 		<Unit filename="TabelaDeRepasse.cpp" />
@@ -45,8 +47,6 @@
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
-			<code_completion />
-			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

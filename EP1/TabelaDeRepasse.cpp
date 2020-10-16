@@ -14,7 +14,6 @@ TabelaDeRepasse::TabelaDeRepasse(){
 
     this->roteadorPadrao = NULL; //"Defina o roteador padrão como NULL."
     this->tamanhoTabela = 0;
-
 }
 
 TabelaDeRepasse::~TabelaDeRepasse(){
@@ -30,7 +29,6 @@ bool TabelaDeRepasse::mapear(int endereco, Roteador* adjacente){
             for(int i = 0; i < tamanhoTabela; i++){ // Este FOR verifica se o endereco já está na tabela
                 if(this->endereco[i] == endereco){
                     roteadores[i] = adjacente; // Se estiver, ele associa o roteador ao endereco
-
                     tamanhoTabela++;
                     return true;
                 }
@@ -39,14 +37,13 @@ bool TabelaDeRepasse::mapear(int endereco, Roteador* adjacente){
             tamanhoTabela = tamanhoTabela + 1; // Aumenta-se o tamanho da tabela
             this->endereco[tamanhoTabela] = endereco; // Associa o endereco
             roteadores[tamanhoTabela] = adjacente; // Associa o roteador ao endereco
-
+            tamanhoTabela++;
             return true;
         }
 
         else{
             return false; // A tabela já está cheia - OVERFLOW
         }
-
 }
 
 Roteador** TabelaDeRepasse::getAdjacentes(){

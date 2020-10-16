@@ -28,12 +28,11 @@ void Rede::enviar(string texto, Roteador* origem, int destino, int ttl) {
 
 void Rede::passarTempo() {
     for(int i = 0; i < quantidadeDeRoteadores; i++) {
-//        cout << "Processando o roteador " << i+1 << endl; // Apagar depois
-        /*
-        if(i==4){   // Apagar depois
-            cout << "A fila do roteador 5 esta vazia? " << roteadores[i]->getFila()->isEmpty() << endl;
-        }
-        */
         roteadores[i]->processar();
     }
+}
+
+void Rede::imprimir(){
+
+
 }
