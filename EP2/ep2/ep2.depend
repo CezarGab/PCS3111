@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
+	<iostream>
+
+1604792627 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.cpp
+	"Segmento.h"
+
+1604792573 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.h
+	<string>
+
+1604850272 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\datagrama.cpp
+	"Datagrama.h"
+	<iostream>
+
+1604850194 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\datagrama.h
+	"Segmento.h"
+
+1604853084 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\fila.cpp
+	<iostream>
+	<string>
+	"Fila.h"
+
+1604853077 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\fila.h
+	"Datagrama.h"
+	<stdexcept>
+
