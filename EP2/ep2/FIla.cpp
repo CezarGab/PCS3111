@@ -21,7 +21,8 @@ Fila::~Fila() {
 }
 
 // Enqueue - adiciona um datagrama no fim da lista
-void Fila::enqueue(Datagrama* d) {
+void Fila::enqueue(Datagrama* d) { // >>>MESMA COISA DO EP1, mas usa exception
+
     if (inicio == fim) { // Checando se o fim é igual ao começo
         if (this->isEmpty() == true) {  // Checa se a lista está vazia
             fila[fim] = d;
@@ -70,7 +71,7 @@ bool Fila::isEmpty() {
 
 }
 
-Datagrama* Fila::dequeue() {
+Datagrama* Fila::dequeue() { //>>>MESMA COISA DO EP1, mas usa exception
     if (this->isEmpty() == true) { // Checa se a fila está vazia (underflow), retorna NULL se estiver
         throw new underflow_error("\t Fila vazia (underflow)");
     }

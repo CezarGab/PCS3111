@@ -1,6 +1,13 @@
 # depslib dependency file v1.0
-1584205420 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
+1606669547 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
 	<iostream>
+	"Segmento.h"
+	"Datagrama.h"
+	"Fila.h"
+	"TabelaDeRepasse.h"
+	"No.h"
+	"Roteador.h"
+	"Processo.h"
 
 1604792627 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.cpp
 	"Segmento.h"
@@ -15,7 +22,7 @@
 1604850194 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\datagrama.h
 	"Segmento.h"
 
-1604853084 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\fila.cpp
+1606670272 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\fila.cpp
 	<iostream>
 	<string>
 	"Fila.h"
@@ -23,4 +30,38 @@
 1604853077 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\fila.h
 	"Datagrama.h"
 	<stdexcept>
+
+1606668632 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.cpp
+	"Roteador.h"
+
+1606669117 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.h
+	"TabelaDeRepasse.h"
+	"No.h"
+	<iostream>
+	<stdexcept>
+
+1606670272 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\no.h
+	"Fila.h"
+	<iostream>
+
+1606668084 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.h
+	"No.h"
+	"Roteador.h"
+	<iostream>
+	<stdexcept>
+
+1606670272 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\no.cpp
+	"No.h"
+	"Fila.h"
+
+1606669041 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\processo.cpp
+	"Processo.h"
+
+1606659104 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\processo.h
+	"Roteador.h"
+	"Segmento.h"
+	<iostream>
+
+1606668748 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.cpp
+	"TabelaDeRepasse.h"
 

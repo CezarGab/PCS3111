@@ -2,6 +2,10 @@
 #include "Segmento.h"
 #include "Datagrama.h"
 #include "Fila.h"
+#include "TabelaDeRepasse.h"
+#include "No.h"
+#include "Roteador.h"
+#include "Processo.h"
 
 using namespace std;
 
@@ -17,4 +21,5 @@ int main()
 
     cout << "Deve ser 0 (fila com segmento): " << f1->isEmpty() << endl;
 
+    return 0;
 }

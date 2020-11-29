@@ -38,6 +38,12 @@
 		<Unit filename="Datagrama.h" />
 		<Unit filename="Fila.cpp" />
 		<Unit filename="Fila.h" />
+		<Unit filename="No.cpp" />
+		<Unit filename="No.h" />
+		<Unit filename="Processo.cpp" />
+		<Unit filename="Processo.h" />
+		<Unit filename="Roteador.cpp" />
+		<Unit filename="Roteador.h" />
 		<Unit filename="Segmento.cpp" />
 		<Unit filename="Segmento.h" />
 		<Unit filename="TabelaDeRepasse.cpp" />
