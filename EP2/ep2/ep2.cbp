@@ -38,6 +38,8 @@
 		<Unit filename="Datagrama.h" />
 		<Unit filename="Fila.cpp" />
 		<Unit filename="Fila.h" />
+		<Unit filename="Navegador.cpp" />
+		<Unit filename="Navegador.h" />
 		<Unit filename="No.cpp" />
 		<Unit filename="No.h" />
 		<Unit filename="Processo.cpp" />
@@ -46,6 +48,8 @@
 		<Unit filename="Roteador.h" />
 		<Unit filename="Segmento.cpp" />
 		<Unit filename="Segmento.h" />
+		<Unit filename="ServidorWeb.cpp" />
+		<Unit filename="ServidorWeb.h" />
 		<Unit filename="TabelaDeRepasse.cpp" />
 		<Unit filename="TabelaDeRepasse.h" />
 		<Unit filename="main.cpp" />

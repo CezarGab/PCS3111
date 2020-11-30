@@ -12,7 +12,7 @@
 1604792627 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.cpp
 	"Segmento.h"
 
-1604792573 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.h
+1606704329 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.h
 	<string>
 
 1604850272 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\datagrama.cpp
@@ -31,7 +31,7 @@
 	"Datagrama.h"
 	<stdexcept>
 
-1606668632 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.cpp
+1606670272 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.cpp
 	"Roteador.h"
 
 1606669117 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.h
@@ -54,7 +54,7 @@
 	"No.h"
 	"Fila.h"
 
-1606669041 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\processo.cpp
+1606670297 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\processo.cpp
 	"Processo.h"
 
 1606659104 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\processo.h
@@ -64,4 +64,10 @@
 
 1606668748 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.cpp
 	"TabelaDeRepasse.h"
+
+1606704280 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.cpp
+	"Navegador.h"
+
+1606704548 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.h
+	"Processo.h"
 

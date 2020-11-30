@@ -16,7 +16,7 @@ class Segmento
 
         virtual void imprimir();
 
-    private:
+    protected:
         int portaDeOrigem;
         int portaDeDestino;
         string dado;
