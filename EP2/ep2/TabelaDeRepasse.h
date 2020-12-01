@@ -30,6 +30,7 @@ class TabelaDeRepasse
         int *endereco;
         int tamanhoTabela;
         No* noPadrao;
+        bool noAdicionado;
 
 };
 

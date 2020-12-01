@@ -9,7 +9,7 @@
 	"Roteador.h"
 	"Processo.h"
 
-1604792627 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.cpp
+1606704586 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.cpp
 	"Segmento.h"
 
 1606704329 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.h
@@ -44,7 +44,7 @@
 	"Fila.h"
 	<iostream>
 
-1606668084 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.h
+1606836942 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.h
 	"No.h"
 	"Roteador.h"
 	<iostream>
@@ -62,12 +62,19 @@
 	"Segmento.h"
 	<iostream>
 
-1606668748 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.cpp
+1606844306 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.cpp
 	"TabelaDeRepasse.h"
 
 1606704280 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.cpp
 	"Navegador.h"
 
 1606704548 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.h
+	"Processo.h"
+
+1606704280 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\servidorweb.cpp
+	"ServidorWeb.h"
+	"Segmento.h"
+
+1606704586 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\servidorweb.h
 	"Processo.h"
 

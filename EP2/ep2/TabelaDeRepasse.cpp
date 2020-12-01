@@ -23,18 +23,21 @@ TabelaDeRepasse::~TabelaDeRepasse(){
 }
 
 void TabelaDeRepasse::mapear(int endereco, No* adjacente){
+        noAdicionado = false; // O no recebido ainda nao foi adicionado
         if(tamanhoTabela < MAXIMO_TABELA){ // Se a tabela ainda aceita valores...
             for(int i = 0; i < tamanhoTabela; i++){ // Este FOR verifica se o endereco já está na tabela
                 if(this->endereco[i] == endereco){
                     nos[i] = adjacente; // Se estiver, ele associa o no ao endereco
-                    tamanhoTabela++;
+                    tamanhoTabela++; // DÚVIDA: Sera que eh necessaria essa linha aqui?
+                    noAdicionado = true;
                 }
             }
-            // Se saiu do FOR, então o endereco nao estava na tabela
-            tamanhoTabela = tamanhoTabela + 1; // Aumenta-se o tamanho da tabela
-            this->endereco[tamanhoTabela] = endereco; // Associa o endereco
-            nos[tamanhoTabela] = adjacente; // Associa o no ao endereco
-            tamanhoTabela++;
+
+            if(!noAdicionado){ // Se o endereco nao estava na tabela, deve-se adiciona-lo para adicionar o no.
+                this->endereco[tamanhoTabela] = endereco; // Associa o endereco
+                nos[tamanhoTabela] = adjacente; // Associa o no ao endereco
+                tamanhoTabela++;
+            }
         }
 
         else{
