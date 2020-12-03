@@ -78,3 +78,29 @@
 1606704586 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\servidorweb.h
 	"Processo.h"
 
+1606845549 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\hospedeiro.cpp
+	"Hospedeiro.h"
+	<vector>
+	<stdexcept>
+
+1606848955 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\hospedeiro.h
+	"No.h"
+	"Roteador.h"
+	"Processo.h"
+	"ServidorWeb.h"
+	"Navegador.h"
+	<vector>
+
+1607014087 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\rede.cpp
+	"Rede.h"
+
+1607013158 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\rede.h
+	<iostream>
+	<vector>
+	<list>
+	<algorithm>
+	"No.h"
+	"Roteador.h"
+	"Processo.h"
+	"Hospedeiro.h"
+

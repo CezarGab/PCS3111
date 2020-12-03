@@ -63,3 +63,7 @@ void Rede::passarTempo() {
     }
 
 }
+
+void Rede::imprimir(){
+
+}

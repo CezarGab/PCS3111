@@ -17,7 +17,7 @@ class Hospedeiro : public No
         virtual Processo* getProcesso(int porta);
         virtual vector<Processo*>* getProcessos();
 
-        virtual void processar();
+        void processar();
 
     protected:
         Roteador* gateway;
