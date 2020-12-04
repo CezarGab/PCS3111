@@ -43,7 +43,7 @@ No* Rede::getNo(int endereco) {
 
 }
 
-list<Hospedeiro*>* Rede::getHospedeiro() {
+list<Hospedeiro*>* Rede::getHospedeiros() {
 
     for(unsigned int i = 0; i < nosDaRede->size(); i++) { // Percorre o vector de nós
 

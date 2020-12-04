@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1606669547 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
+1607049241 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
 	<iostream>
+	"stdlib.h"
 	"Segmento.h"
 	"Datagrama.h"
 	"Fila.h"
@@ -8,6 +9,11 @@
 	"No.h"
 	"Roteador.h"
 	"Processo.h"
+	"Navegador.h"
+	"ServidorWeb.h"
+	"Hospedeiro.h"
+	"Rede.h"
+	"PersistenciaDeRede.h"
 
 1606704586 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\segmento.cpp
 	"Segmento.h"
@@ -103,4 +109,19 @@
 	"Roteador.h"
 	"Processo.h"
 	"Hospedeiro.h"
+
+1607032629 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\persistenciaderede.cpp
+	"PersistenciaDeRede.h"
+	"No.h"
+	"ServidorWeb.h"
+	"Roteador.h"
+	"Navegador.h"
+	"TabelaDeRepasse.h"
+
+1607031682 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\persistenciaderede.h
+	"Rede.h"
+	<fstream>
+	<iostream>
+	<stdexcept>
+	"stdio.h"
 

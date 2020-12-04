@@ -20,7 +20,7 @@ class Rede
         virtual void adicionar(No* no);
 
         virtual No* getNo(int endereco);
-        virtual list<Hospedeiro*>* getHospedeiro();
+        virtual list<Hospedeiro*>* getHospedeiros();
 
         virtual void passarTempo();
 

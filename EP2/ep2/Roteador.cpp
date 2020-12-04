@@ -39,6 +39,12 @@ void Roteador::processar() // >>MESMA COISA DO EP1<<, mas usa nos ao inves de ro
 
         else{ // Entao o datagrama esta ativo ainda
             if(dtgParaProcessar->getDestino() == endereco){ // Se o destino do datagrama for este roteador...
+                cout << "\tRecebido> "; // Datagrama recebido
+                cout << "Origem: " << dtgParaProcessar->getOrigem();
+                cout << ", Destino: " << dtgParaProcessar->getDestino();
+                cout << ", TTL: " << dtgParaProcessar->getTtl();
+                cout << ", " << dtgParaProcessar->getDado() << endl;
+
                 delete dtgParaProcessar;
             }
 
@@ -46,8 +52,14 @@ void Roteador::processar() // >>MESMA COISA DO EP1<<, mas usa nos ao inves de ro
                 No* noParaRepassar = tabela->getDestino(dtgParaProcessar->getDestino()); // Descobre qual deve ser o roteador para repassar atraves da tabela
 
                 if(noParaRepassar == NULL){ // Se a tabela nao sabe...
+                    cout << "\tSem proximo: " << endl;
+                    cout << "Origem: " << dtgParaProcessar->getOrigem();
+                    cout << ", Destino: " << dtgParaProcessar->getDestino();
+                    cout << ", TTL: " << dtgParaProcessar->getTtl();
+                    cout << ", " << dtgParaProcessar->getDado() << endl;
+
                     delete dtgParaProcessar; // exclui o datagrama
-                    cout << "\tNao ha pra quem repassar." << endl; // APAGAR ESSA LINHA DEPOIS (acho que nao precisa)
+
                 }
 
                 else{
