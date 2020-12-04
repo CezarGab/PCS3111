@@ -19,7 +19,6 @@ void Navegador::abrir(int endereco, int porta){
 
 //      "Em relação ao conteúdo, use sempre o texto “GET”"
 
-
         Segmento* segmentoParaEnviar = new Segmento(this->porta, porta, "GET");
         Datagrama* datagramaParaEnviar = new Datagrama(this->endereco, endereco, this->getTtlPadrao(), segmentoParaEnviar);
                                                                                         //  "No TTL, use o que está definido no método getTtlPadrao. "
@@ -47,10 +46,21 @@ void Navegador::receber(int origem, Segmento* mensagem){
         conteudo = mensagem->getDado(); // "Caso esteja esperando, o conteúdo do Segmento deve ser armazenado de modo que o método
                                         // getConteudo retorne agora o seu valor. "
 
+        cout << "Navegador" << this->porta << endl;
+        cout << "\tRecebido de " << origem << ":" << mensagem->getPortaDeOrigem() << ": " << conteudo << endl; // DÚVIDA: REVISAR ISSO AQUI (IMPORTANTE DEMAIS, nao entendi se eh isso mesmo)
+
         esperandoPorResposta = false; // "ao receber um Segmento esperado o Navegador
                                       // não deve mais ficar esperando por uma resposta"
     }
 
+    cout << "Navegador" << this->porta << endl;
+    cout << "\tMensagem ignorada " << origem << ":" << mensagem->getPortaDeOrigem() << ": " << conteudo << endl; // DÚVIDA: REVISAR ISSO AQUI (IMPORTANTE DEMAIS, nao entendi se eh isso mesmo)
+
+
+    // Caso não haja um Processo na porta informada pelo Segmento, o Hospedeiro deve imprimir:
+    // Sem destino: <datagrama>
+    // Por exemplo:
+    // Sem destino: Origem: 1:1000, Destino: 20:10, TTL: 4, Algo // DÚVIDA: não sei como fazer isso, pq nao entendi esse metodo ainda
 
     // IMPRESSOES DEVEM SER FEITAS EM TELA DEPOIS, CONFORME SECAO 4.1.
 }

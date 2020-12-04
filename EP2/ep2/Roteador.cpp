@@ -52,7 +52,7 @@ void Roteador::processar() // >>MESMA COISA DO EP1<<, mas usa nos ao inves de ro
                 No* noParaRepassar = tabela->getDestino(dtgParaProcessar->getDestino()); // Descobre qual deve ser o roteador para repassar atraves da tabela
 
                 if(noParaRepassar == NULL){ // Se a tabela nao sabe...
-                    cout << "\tSem proximo: " << endl;
+                    cout << "\tSemProximo: " << endl;
                     cout << "Origem: " << dtgParaProcessar->getOrigem();
                     cout << ", Destino: " << dtgParaProcessar->getDestino();
                     cout << ", TTL: " << dtgParaProcessar->getTtl();

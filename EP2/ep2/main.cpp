@@ -32,7 +32,9 @@ int main()
 
     string arquivo;
     cout << "Digite o nome do arquivo: ";
-    cin >> arquivo;
+//    cin >> arquivo;
+
+    arquivo = "exemplo1.txt"; // APENAS PARA TESTES
 
     PersistenciaDeRede* persistencia = new PersistenciaDeRede();
 
@@ -50,11 +52,12 @@ int main()
 void menuPrincipal(Rede* rede)
 {
     int opcao;
-    cout << "Simulador de Rede" << endl;
+    cout << "\nSimulador de Rede" << endl;
     cout << "---" << endl;
-    cout << "1) Enviar um datagrama" << endl;
+    cout << "1) Usar um navegador" << endl;
     cout << "2) Passar tempo" << endl;
-    cout << "3) Sair" << endl;
+    cout << "3) Alterar TTL" << endl;
+    cout << "4) Sair" << endl;
     cout << "Escolha uma opcao: ";
 
     cin >> opcao;
@@ -62,37 +65,63 @@ void menuPrincipal(Rede* rede)
 
     switch ( opcao )
     {
-        case 1 : // Enviar um datagrama
+        case 1 : // Usar um navegador
 
 
             list<Hospedeiro*>* hospedeiros;
 
-            hospedeiros = rede->getHospedeiro();
+            // LISTAGEM DE HOSPEDEIROS ----------------
+
+            hospedeiros = rede->getHospedeiros();
 
             Hospedeiro* hospedeiro;
+            unsigned int tamanhoHospedeiros;
+            tamanhoHospedeiros = hospedeiros->size();
 
-            for(unsigned int i = 0; i < hospedeiros->size(); i++) { //
+            cout << "Quantidade de hospedeiros: " << tamanhoHospedeiros << endl;
+
+            for(unsigned int i = 0; i < tamanhoHospedeiros; i++) { //
                 hospedeiro = hospedeiros->front();
-                cout << "Hospedeiro " << hospedeiro->getEndereco(); // Imprima "Hospedeiro <e>"
+                cout << "Hospedeiro " << hospedeiro->getEndereco() << endl; // Imprima "Hospedeiro <e>"
 
                 vector<Processo*>* processosHospedeiro;
                 processosHospedeiro = hospedeiro->getProcessos(); // Pegando os processos do Hospedeiro
+                Navegador* testaProcesso;
 
                 for(unsigned int j = 0; j < processosHospedeiro->size(); j++) { // Pega todos os processos do Hospedeiro
-                        cout << "\t";
-                        Navegador* testaProcesso = dynamic_cast<Navegador*>(processosHospedeiro->at(j));
+
+
+                        testaProcesso = dynamic_cast<Navegador*>(processosHospedeiro->at(j));
 
                         if(testaProcesso != NULL) {// Verifica se a conversão foi bem sucedida. Se for, o processo eh um navegador
-                            cout << "Navegador" << processosHospedeiro->at(j)->getPorta() << endl;
+                            cout << "\tNavegador " << processosHospedeiro->at(j)->getPorta() << endl;
                         }
 
                         else{ // Entao o processo eh um serverWeb
-                            cout << "ServidorWeb" << processosHospedeiro->at(j)->getPorta() << endl;
+                            cout << "\tServidorWeb " << processosHospedeiro->at(j)->getPorta() << endl;
                         }
-                hospedeiros->pop_front(); // Descarta o comeco da pilha de hospedeiros
-                }
-            }
 
+                }
+
+                hospedeiros->pop_front(); // Descarta o comeco da pilha de hospedeiros
+            }
+            cout << "\n";
+
+            int enderecoHospedeiro, portaNavegador, enderecoPagina, portaServer;
+            cout << "Digite o endereco do hospedeiro: ";
+            cin >> enderecoHospedeiro;
+
+            cout << "Digite a porta do navegador: ";
+            cin >> portaNavegador;
+
+            cout << "Abrir pagina no endereco ";
+            cin >> enderecoPagina;
+
+            cout << "Porta do Servidor Web: ";
+            cin >> portaServer;
+
+
+            menuPrincipal(rede);
             break;
 
         case 2 : // Passar tempo
@@ -102,14 +131,18 @@ void menuPrincipal(Rede* rede)
             for(int i = 0; i < tempo; tempo++){
                 rede->passarTempo();
             }
+
+            menuPrincipal(rede);
             break;
 
         case 3: // Alterar TTL
-//
-//            cout << "TTL atual: " << processo->getTtlPadrao();
+            int novoTtl;
+            cout << "TTL atual: " << Processo::getTtlPadrao() << endl;
             cout << "Novo TTL: ";
-//            cin >> processo->setTtlPadrao();
+            cin >> novoTtl;
+            Processo::setTtlPadrao(novoTtl);
 
+            menuPrincipal(rede);
             break;
 
 
@@ -122,3 +155,5 @@ void menuPrincipal(Rede* rede)
             break;
     }
 }
+
+

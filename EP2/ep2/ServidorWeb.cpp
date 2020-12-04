@@ -18,8 +18,14 @@ void ServidorWeb::receber(int origem, Segmento* mensagem){
 //    endereço e porta do ServidorWeb. Para retornar o pacote à origem, o ServidorWeb deve usar o
 //    Roteador gateway.
 
+    cout << "ServidorWeb" << this->porta << endl;
+    cout << "\tDevolvendo mensagem para: " << origem << ":" << mensagem->getPortaDeDestino()<< endl; // DÚVIDA: REVISAR ISSO AQUI (IMPORTANTE DEMAIS, nao entendi se eh isso mesmo)
+
+
     Segmento* segmentoParaEnviar = new Segmento(this->porta, mensagem->getPortaDeDestino(), this->conteudo);
     Datagrama* datagramaParaRetornar = new Datagrama(this->endereco, origem, this->getTtlPadrao(), segmentoParaEnviar);
+
+    gateway->receber(datagramaParaRetornar);
 
     // E agora pra enviar esse datagrama?
 

@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1607049241 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
+1607108029 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\main.cpp
 	<iostream>
 	"stdlib.h"
+	"stdio.h"
 	"Segmento.h"
 	"Datagrama.h"
 	"Fila.h"
@@ -37,7 +38,7 @@
 	"Datagrama.h"
 	<stdexcept>
 
-1606670272 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.cpp
+1607107993 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.cpp
 	"Roteador.h"
 
 1606669117 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\roteador.h
@@ -71,20 +72,20 @@
 1606844306 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\tabeladerepasse.cpp
 	"TabelaDeRepasse.h"
 
-1606704280 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.cpp
+1607107993 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.cpp
 	"Navegador.h"
 
 1606704548 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\navegador.h
 	"Processo.h"
 
-1606704280 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\servidorweb.cpp
+1607107993 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\servidorweb.cpp
 	"ServidorWeb.h"
 	"Segmento.h"
 
 1606704586 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\servidorweb.h
 	"Processo.h"
 
-1606845549 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\hospedeiro.cpp
+1607107993 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\hospedeiro.cpp
 	"Hospedeiro.h"
 	<vector>
 	<stdexcept>
@@ -97,10 +98,10 @@
 	"Navegador.h"
 	<vector>
 
-1607014087 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\rede.cpp
+1607052223 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\rede.cpp
 	"Rede.h"
 
-1607013158 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\rede.h
+1607052227 c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\rede.h
 	<iostream>
 	<vector>
 	<list>
@@ -110,7 +111,7 @@
 	"Processo.h"
 	"Hospedeiro.h"
 
-1607032629 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\persistenciaderede.cpp
+1607105386 source:c:\users\cezar\documents\usp\laboo\ep1\pcs3111\ep2\ep2\persistenciaderede.cpp
 	"PersistenciaDeRede.h"
 	"No.h"
 	"ServidorWeb.h"
