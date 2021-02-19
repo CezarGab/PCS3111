@@ -1,0 +1,69 @@
+## Correção feita automáticamente pela plataforma Judge utilizada pelos professores.
+ 
+```
+Test 1 - Datagrama construtor getters e destrutor:
+ACCEPT
+Test 2 - Datagrama processar e getTtl:
+ACCEPT
+Test 3 - Datagrama ativo e processar:
+ACCEPT
+Test 4 - Fila construtor e destrutor:
+ACCEPT
+Test 5 - Fila enqueue e isEmpty:
+ACCEPT
+Test 6 - Fila enqueue e overflow:
+ACCEPT
+Test 7 - Fila enqueue e depois dequeue sem circular:
+ACCEPT
+Test 8 - Fila enqueue intercalado com dequeue sem circular:
+ACCEPT
+Test 9 - Fila enqueue e dequeue circular:
+ACCEPT
+Test 10 - Fila overflow e circular:
+ACCEPT
+Test 11 - Fila underflow e circular:
+ACCEPT
+Test 12 - Rede construtor e destrutor:
+ACCEPT
+Test 13 - Rede getRoteador:
+ACCEPT
+Test 14 - Rede getRoteador enderecos invalidos:
+ACCEPT
+Test 15 - Rede enviar:
+ACCEPT
+Test 16 - Rede passarTempo:
+ACCEPT
+Test 17 - TabelaDeRepasse construtor e destrutor:
+ACCEPT
+Test 18 - TabelaDeRepasse mapear e getAdjacentes:
+WRONG
+Test 19 - TabelaDeRepasse mapear com substituicao:
+WRONG
+Test 20 - TabelaDeRepasse mapear e MAXIMO TABELA:
+WRONG
+Test 21 - TabelaDeRepasse setPadrao e getAdjacentes:
+WRONG
+Test 22 - TabelaDeRepasse getDestino:
+WRONG
+Test 23 - TabelaDeRepasse getDestino e substituicao:
+WRONG
+Test 24 - TabelaDeRepasse getDestino e padrao:
+WRONG
+Test 25 - TabelaDeRepasse getDestino e padrao NULL:
+WRONG
+--
+Test 1 - Roteador construtor getters e destrutor:
+ACCEPT
+Test 2 - Roteador receber:
+ACCEPT
+Test 3 - Roteador receber e processar inativo:
+ACCEPT
+Test 4 - Roteador receber e processar destinatario:
+ACCEPT
+Test 5 - Roteador receber e processar repassar:
+ACCEPT
+Test 6 - Roteador receber e processar variado 1:
+ACCEPT
+Test 7 - Roteador receber e processar variado 2:
+ACCEPT
+```

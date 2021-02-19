@@ -1,0 +1,133 @@
+## Correção feita automáticamente pela plataforma Judge, utilizada pelos professores.
+
+```
+Test 1 - Datagrama construtor getters e destrutor:
+ACCEPT
+Test 2 - Datagrama processar e getTtl:
+ACCEPT
+Test 3 - Datagrama ativo e processar:
+ACCEPT
+Test 4 - Fila construtor e destrutor:
+ACCEPT
+Test 5 - Fila enqueue e isEmpty:
+ACCEPT
+Test 6 - Fila enqueue e overflow:
+ACCEPT
+Test 7 - Fila enqueue e dequeue circular:
+ACCEPT
+Test 8 - Fila underflow:
+ACCEPT
+Test 9 - Navegador construtor getters e destrutor:
+ACCEPT
+Test 10 - Navegador abrir:
+ACCEPT
+Test 11 - Navegador abrir sem porta:
+ACCEPT
+Test 12 - Navegador abrir e receber:
+ACCEPT
+Test 13 - Navegador ignorar receber:
+ACCEPT
+Test 14 - Navegador abrir e ttl padrao:
+ACCEPT
+Test 15 - Processo eh abstrata:
+ACCEPT
+Test 16 - Processo nao tem classe base:
+ACCEPT
+Test 17 - Processo Navegador e ServidorWeb sao filhas:
+ACCEPT
+Test 18 - Processo getTtlPadrao e setTtlPadrao:
+ACCEPT
+Test 19 - Rede construtor e destrutor:
+ACCEPT
+Test 20 - Rede adicionar e getNo:
+ACCEPT
+Test 21 - Rede adicionar com endereco igual:
+ACCEPT
+Test 22 - Rede getHospedeiros sem Hospedeiros:
+ACCEPT
+Test 23 - Rede getHospedeiros 1 Hospedeiro:
+ACCEPT
+Test 24 - Rede getHospedeiros varios Hospedeiros:
+WRONG
+Test 25 - Rede passarTempo:
+Runtime Error
+Test 26 - Datagrama construtor getters e destrutor:
+ACCEPT
+Test 27 - ServidorWeb construtor getters e destrutor:
+ACCEPT
+Test 28 - ServidorWeb receber:
+ACCEPT
+Test 29 - Navegador receber e ttl padrao:
+ACCEPT
+Test 30 - TabelaDeRepasse construtor destrutor e constante:
+ACCEPT
+Test 31 - TabelaDeRepasse mapear e getAdjacentes:
+ACCEPT
+Test 32 - TabelaDeRepasse mapear com substituicao:
+WRONG
+Test 33 - TabelaDeRepasse mapear e overflow:
+ACCEPT
+Test 34 - TabelaDeRepasse setPadrao e getAdjacentes:
+ACCEPT
+Test 35 - TabelaDeRepasse getDestino:
+ACCEPT
+Test 36 - TabelaDeRepasse getDestino e substituicao:
+WRONG
+Test 37 - TabelaDeRepasse getDestino e padrao:
+ACCEPT
+--
+Test 1 - Hospedeiro construtor getters e destrutor:
+ACCEPT
+Test 2 - Hospedeiro adicionarServidorWeb e getProcessos:
+ACCEPT
+Test 3 - Hospedeiro adicionarNavegador e getProcessos:
+ACCEPT
+Test 4 - Hospedeiro adicionar e getProcessos:
+ACCEPT
+Test 5 - Hospedeiro adicionar e porta ja ocupada:
+ACCEPT
+Test 6 - Hospedeiro adicionar e getProcesso:
+ACCEPT
+Test 7 - Hospedeiro receber enviar para processo:
+ACCEPT
+Test 8 - Hospedeiro receber com estouro:
+ACCEPT
+Test 9 - Hospedeiro receber e processar sem processo destino:
+Runtime Error
+Test 10 - No eh abstrata:
+ACCEPT
+Test 11 - No nao tem classe base:
+ACCEPT
+Test 12 - No Roteador e Hospedeiro sao filhas:
+ACCEPT
+Test 13 - Roteador construtor getters e destrutor:
+ACCEPT
+Test 14 - Roteador receber:
+ACCEPT
+Test 15 - Roteador receber com estouro:
+ACCEPT
+Test 16 - Roteador receber e processar inativo:
+ACCEPT
+Test 17 - Roteador receber e processar destinatario:
+ACCEPT
+Test 18 - Roteador receber e processar repassar:
+ACCEPT
+Test 19 - Roteador receber e processar variado:
+ACCEPT
+--
+Test 1 - PersistenciaDeRede Arquivo inexistente:
+ACCEPT
+Test 2 - PersistenciaDeRede Erro formato Hospedeiro:
+Runtime Error
+Test 3 - PersistenciaDeRede Erro falta tabela de repasse:
+WRONG
+Test 4 - PersistenciaDeRede So 2 roteadores e 1 Hospedeiro:
+ACCEPT
+Test 5 - PersistenciaDeRede Enunciado1:
+WRONG
+Test 6 - PersistenciaDeRede Enunciado2:
+WRONG
+Test 7 - PersistenciaDeRede Outra rede:
+ACCEPT
+
+```
