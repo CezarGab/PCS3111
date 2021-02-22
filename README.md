@@ -48,7 +48,7 @@ Já os Exercícios-Programas foram desenvolvidos diretamente pelo Git e, portant
 * [EP2](https://github.com/CezarGab/PCS3111/blob/master/Screenshots/EP2.png?raw=true)
 
 ## Rodando os códigos
-Todos os arquivos foram desenvolvidos pelo CodeBlocks e podem ser compilados por ele. Porém, recomendo rodar os códigos usando o repositório pelo [Gitpod](gitpod.io/#https://github.com/CezarGab/PCS3111/). Basta acessar o link e navegar pelas pastas.
+Todos os arquivos foram desenvolvidos pelo CodeBlocks e podem ser compilados por ele. Porém, recomendo rodar os códigos usando o repositório pelo [Gitpod](https://gitpod.io/#https://github.com/CezarGab/PCS3111/). Basta acessar o link e navegar pelas pastas.
 Para rodar o EP1, por exemplo: 
 
 ```
