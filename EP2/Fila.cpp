@@ -5,7 +5,7 @@
 using namespace std;
 
 // Construtor
-Fila::Fila(int tamanho) :tamanho (tamanho) { // Tamanho recebe tamanho pois o início é em 0
+Fila::Fila(int tamanho) :tamanho (tamanho) { // Tamanho recebe tamanho pois o inï¿½cio ï¿½ em 0
     fila = new Datagrama*[tamanho];
     inicio = 0;
     fim = 0;
@@ -21,8 +21,8 @@ Fila::~Fila() {
 // Enqueue - adiciona um datagrama no fim da lista
 void Fila::enqueue(Datagrama* d) { // >>>MESMA COISA DO EP1, mas usa exception
 
-    if (inicio == fim) { // Checando se o fim é igual ao começo
-        if (this->isEmpty() == true) {  // Checa se a lista está vazia
+    if (inicio == fim) { // Checando se o fim ï¿½ igual ao comeï¿½o
+        if (this->isEmpty() == true) {  // Checa se a lista estï¿½ vazia
             fila[fim] = d;
             if (fim == tamanho - 1) {
                 fim = 0;
@@ -36,7 +36,7 @@ void Fila::enqueue(Datagrama* d) { // >>>MESMA COISA DO EP1, mas usa exception
             throw new overflow_error("\tOverflow na fila");
         }
     }
-    else { // Caso em que o fim é diferente do começo
+    else { // Caso em que o fim ï¿½ diferente do comeï¿½o
         if (fim == tamanho - 1) {
             fila[fim] = d;
             fim = 0;
@@ -48,10 +48,9 @@ void Fila::enqueue(Datagrama* d) { // >>>MESMA COISA DO EP1, mas usa exception
         }
 
     }
-    cout << "Enqueue funcionando" << endl;
 }
 
-// Checa se a lista está vazia
+// Checa se a lista estï¿½ vazia
 bool Fila::isEmpty() {
     int contador = 0;
     for (int i = 0; i < tamanho; i++) {
@@ -64,24 +63,24 @@ bool Fila::isEmpty() {
         return true;
     }
     else {
-        // Fila contém algo
+        // Fila contï¿½m algo
         return false;
     }
 
 }
 
 Datagrama* Fila::dequeue() { //>>>MESMA COISA DO EP1, mas usa exception
-    if (this->isEmpty() == true) { // Checa se a fila está vazia (underflow), retorna NULL se estiver
+    if (this->isEmpty() == true) { // Checa se a fila estï¿½ vazia (underflow), retorna NULL se estiver
         throw new underflow_error("\t Fila vazia (underflow)");
     }
 
-    Datagrama* retirado = fila[inicio]; // Armazena o datagrama em uma variável
+    Datagrama* retirado = fila[inicio]; // Armazena o datagrama em uma variï¿½vel
     fila[inicio] = NULL;
-    if (inicio + 1 == tamanho) { //   Checa se o início está na última posição da lista,
-        inicio = 0;                        // se estiver ele coloca o início na posição 0 [fila circular]
+    if (inicio + 1 == tamanho) { //   Checa se o inï¿½cio estï¿½ na ï¿½ltima posiï¿½ï¿½o da lista,
+        inicio = 0;                        // se estiver ele coloca o inï¿½cio na posiï¿½ï¿½o 0 [fila circular]
     }
     else {
-        inicio += 1; // Se não coloca na próxima posição
+        inicio += 1; // Se nï¿½o coloca na prï¿½xima posiï¿½ï¿½o
     }
     return retirado;
 

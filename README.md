@@ -1,6 +1,3 @@
-# PCS3111
-
-
 ## Introdução
 Olá! Este repositório armazena os exercícios-programas (EP's) e exercícios desenvolvidos em aula durante a realização da disciplina **PCS3111 - Laboratório de Programação Orientada a Objetos para Engenharia Elétrica**, no ano de 2020, no curso de Engenharia Elétrica da *Escola Politécnica da USP*. A matéria foi coordenada pelo Prof. Fábio Levy Siqueira e ministrada pelo Prof. Ricardo L. da Rocha
 O objetivo em tornar estes arquivos públicos se baseia em...
@@ -21,10 +18,7 @@ Por isto, **para entender os exercícios desenvolvidos em aula** e os conceitos 
 Já os Exercícios-Programas foram desenvolvidos diretamente pelo Git e, portanto, contam com os logs de envio em cada upload. Os **enunciados** de cada EP também constam em suas pastas, e também são de necessária visualização.
 
 
-### Contribuidores
-Os exercícios desenvolvidos em sala e as provas disponibilizadas foram realizados por mim, Cezar Gabriel. Já os EP's, realizados em dupla, também contaram com o trabalho do [Gabriel Calasans](https://github.com/gabrielcalasans).
-
-### Notas obtidas 
+## Notas obtidas 
 *OBS: o sistema de avaliação para os exercícios era automático, através da plataforma Sharif Judge. Por isto, deixarei disponível também o relatório que o sistema forneceu para ponderar a nota dos exercícios-programa.*
 
 | Avaliação | Nota obtida |
@@ -49,24 +43,39 @@ Os exercícios desenvolvidos em sala e as provas disponibilizadas foram realizad
 
 >Nas pastas dos EP's encontram-se também os resultados do feedback que o sistema Judge apresentou para os códigos. Esse feedback informa em que resultados os códigos não estão cumprindo com o enunciado.
 
-### Screenshots (EPs)
-* EP1
-![alt text][ep1]
+## Screenshots (EPs)
+* [EP1](https://github.com/CezarGab/PCS3111/blob/master/Screenshots/EP1.png?raw=true)
+* [EP2](https://github.com/CezarGab/PCS3111/blob/master/Screenshots/EP2.png?raw=true)
 
-[ep1]: https://github.com/CezarGab/PCS3111/tree/master/Screenshots/EP1.png "EP1"
+## Rodando os códigos
+Todos os arquivos foram desenvolvidos pelo CodeBlocks e podem ser compilados por ele. Porém, recomendo rodar os códigos usando o repositório pelo [Gitpod](gitpod.io/#https://github.com/CezarGab/PCS3111/). Basta acessar o link e navegar pelas pastas.
+Para rodar o EP1, por exemplo: 
 
+```
+cd EP1
+./main
+```
 
-* EP2
-![alt text][ep2]
+Caso não haja o executável na pasta: 
+```
+g++ main.cpp -o output
+./output
+```
 
-[ep2]: https://github.com/CezarGab/PCS3111/tree/master/Screenshots/EP2.png "EP2"
+Caso o arquivo tenha múltiplas dependências:
+```
+g++ *.cpp -o output
+./output 
+``` 
 
+## Contribuidores
+Os exercícios desenvolvidos em sala e as provas disponibilizadas foram realizados por mim, Cezar Gabriel. Já os EP's, realizados em dupla, também contaram com o trabalho do [Gabriel Calasans](https://github.com/gabrielcalasans).
 
 ### Desenvolvimento
 
 Nenhum dos EPs obteve nota máxima e, portanto, não estão totalmente finalizados. Além disso, não foram pensados de forma optimizada. Assim, caso encontre os erros e/ou veja oportunidade de melhorias, sinta-se convidado a contribuir com a edição, pois ela certamente será bem-vinda.
 
-### Termos de uso
+## Termos de uso
 
 Todos os direitos sob os enunciados e requisições da disciplina estão reservados para os professores responsáveis e são reproduzidos e compartilhados aqui para, e somente para, consulta. Já os códigos aqui presentes foram desenvolvidos pelos contribuidores e são de livre utilização (apesar de serem altamente *não-recomendados* para uso :p)
 
